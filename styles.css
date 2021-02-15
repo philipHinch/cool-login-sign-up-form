@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --green: #84fab0;
+  --lblue: #8fd3f4;
+}
+
+body {
+  /* background-image: linear-gradient(180deg, #84fab0 0%, #8fd3f4 100%); */
+  background: radial-gradient(circle, var(--green) 0%, var(--lblue) 100%);
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  box-shadow: 0 0 30px;
+  border-radius: 5px;
+  width: 650px;
+  height: 450px;
+  background-color: #f4f4f4;
+  display: flex;
+  position: relative;
+}
+
+form .overlay {
+  display: none;
+}
+
+form .overlay.visible {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  background: #f4f4f4;
+  border-radius: 5px;
+}
+
+form .overlay .inner-overlay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form .overlay small a {
+  color: var(--lblue);
+}
+
+form .overlay small a:hover {
+  border-bottom: 1px solid var(--lblue);
+}
+
+form .right-side {
+  background-image: url(images/patern1.jpg);
+  width: 50%;
+  background-position: right;
+  background-repeat: no-repeat;
+  border-left: 1px solid black;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+form .left-side {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form .left-side h1 {
+  margin-bottom: 20px;
+}
+
+form .left-side .links {
+  margin-bottom: 20px;
+}
+
+form .left-side .links a {
+  margin-right: 15px;
+  color: black;
+}
+
+form .left-side .links a span.circle {
+  border: 2px solid var(--green);
+  border-radius: 50px;
+  display: inline-block;
+  background-color: rgba(132, 250, 176, 0.7);
+  transition: background-color 0.2s ease-in;
+}
+
+form .left-side .links a span.circle:hover {
+  background-color: transparent;
+}
+
+form .left-side .links a span i {
+  padding: 10px 10px;
+  text-align: center;
+}
+
+form .left-side .links a span i.fa-facebook-f {
+  padding: 10px 13px;
+}
+
+form .left-side p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+form .left-side input#name,
+input#email,
+input#password {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 4px;
+  padding: 12px;
+  width: 80%;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+form .left-side input:focus {
+  outline: 2px solid var(--lblue);
+}
+
+form .left-side input::placeholder {
+  opacity: 0.5;
+}
+
+form .left-side .characters {
+  font-size: 0.8rem;
+  opacity: 0;
+  height: 10px;
+  transition: opacity 0.3s ease;
+  color: red;
+}
+
+form .left-side .characters.visible {
+  opacity: 0.5;
+}
+
+form .left-side .checkbox-container {
+  display: flex;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form .left-side .checkbox-container a:hover {
+  border-bottom: 1px solid var(--lblue);
+}
+
+.checkbox-container input {
+  margin: 0 10px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-container label {
+  font-size: 0.9rem;
+}
+
+.checkbox-container label a {
+  color: #8fd3f4;
+}
+
+.buttons {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button {
+  padding: 10px 35px;
+  border-radius: 5px;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.2s ease-in;
+}
+
+.buttons button,
+button:focus {
+  outline: none;
+  background: transparent;
+  border: 2px solid var(--green);
+}
+
+.buttons button.sign-up,
+button.sign-up:focus {
+  background-color: rgba(132, 250, 176, 0.7);
+}
+
+.buttons button.sign-up:hover {
+  background-color: transparent;
+  border: 2px solid var(--green);
+}
+
+.buttons button:active {
+  outline: none;
+  background: transparent;
+}
+
+.buttons button.sign-in:active {
+  outline: none;
+  background: var(--green);
+}
+
+.buttons button.sign-in:hover {
+  background-color: rgba(132, 250, 176, 0.7);
+}
+
+/* Ring Loader */
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  margin: 20px 15px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: rgba(132, 250, 176, 0.3) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

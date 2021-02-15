@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Custom Form</title>
+</head>
+<body>
+    <form class="form-container"> 
+        <div class="overlay">
+            <div class="inner-overlay">
+                <p>You are now being redirected to your profile</p>
+                <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+            </div>
+            <small>Taking too long? <a href="#" class="go-back">Go back</a></small>
+        </div>
+        <div class="left-side">
+            <h1>Create Account</h1>
+            <div class="links">
+                <a href="#"><span class="circle"><i class="fab fa-google"></i></span></a>
+                <a href="#"><span class="circle"><i class="fab fa-facebook-f"></i></span></a>
+                <a href="#"><span class="circle"><i class="fab fa-twitter"></i></span></a>
+                <a href="#"><span class="circle"><i class="fab fa-linkedin-in"></i></span></a>
+            </div>
+            <p>or use email for registration:</p>
+            <input type="text" name="name" id="name" placeholder="Name" required>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <small class="characters">8 characters or more</small>
+            <div class="checkbox-container">
+                <input type="checkbox" name="checkbox" id="checkbox" required>
+                <label for="checkbox">I agree to the <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.</label>
+            </div>
+            <div class="buttons">
+                <button type="submit" class="sign-up">Sign Up</button>
+                <button type="submit" class="sign-in">Sign In</button>
+            </div>
+            
+        </div>
+        <div class="right-side">
+            
+        </div>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
