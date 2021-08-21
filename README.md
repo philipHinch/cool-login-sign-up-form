@@ -1,5 +1,3 @@
-# Cool_Login_-_Signup_Form1
+# Cool looking sign-up form
 
-PREVIEW:
-
-https://codepen.io/neo90sr/pen/abBJdZm
+Nothing else to say, just fill the form!
